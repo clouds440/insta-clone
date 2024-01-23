@@ -1,0 +1,9 @@
+CREATE TABLE `posts` (
+  `postId` int(11) NOT NULL AUTO_INCREMENT,
+  `userId` int(11) NOT NULL,
+  `picture` text NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`postId`),
+  KEY `Foreign Key` (`userId`),
+  CONSTRAINT `Foreign Key` FOREIGN KEY (`userId`) REFERENCES `users` (`userId`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
